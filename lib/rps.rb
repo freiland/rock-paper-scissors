@@ -3,8 +3,8 @@ class RPS
   def initialize()
     puts("welcome to Rock Paper Scissors")
     
-    @player_1
-    @player_2 
+    @player_1 
+    @player_2  
     @wins = 0 
     @losses = 0
     @ties = 0
@@ -21,9 +21,9 @@ class RPS
     @player_2 = gets.chomp.downcase()
   end
 
-  def wins?()
-    first_player = player_one()
-    second_player = player_two()
+  def wins?(test1, test2)
+    first_player = test1
+    second_player = test2
     if (first_player == 'rock' && second_player='scissors' || first_player == 'paper' && second_player='rock' || first_player=='scissors' && second_player=='paper')
       @wins+=1
     print("congratulations you won! Total wins: #{@wins} Total loses: #{@loses} Total ties: #{@ties}")
@@ -31,7 +31,6 @@ class RPS
     elsif first_player == second_player
       @ties+=1
       print("it was a tie! Total wins: #{@wins} Total loses: #{@loses} Total ties: #{@ties}")
-
       return false
     else
       @loses+=1
